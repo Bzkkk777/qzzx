@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <!-- mapUnderscoreToCamelCase：驼峰命名法与下划线命名适配 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!-- typeAliases：为某个java类起别名 ->alias制定新的别名 -->
+    <typeAliases>
+        <!-- <typeAlias type="com.bzk.addmybatis.entity.Department" alias="dept"/> -->
+        <!-- package：为某个包下的所有类型起别名
+                name：指定包名，为当前包及子包所有类起一个默认别名（名字为类名小写）-->
+        <package name="com.bzk.wzzx.entity"/>
+    </typeAliases>
+
+    <mappers>
+        <package name="com.bzk.wzzx.dao"/>
+    </mappers>
+
+</configuration>
